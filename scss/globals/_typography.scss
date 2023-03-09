@@ -1,0 +1,33 @@
+@use "../util" as u;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--light-grey);
+  font-weight: 800;
+}
+
+// h2 {
+//   font-size: u.rem(48);
+//   line-height: u.rem(56);
+// }
+// h3 {
+//   font-size: u.rem(40);
+//   line-height: u.rem(55);
+// }
+// h4 {
+//   font-size: u.rem(32);
+//   line-height: u.rem(44);
+// }
+// h5 {
+//   font-size: u.rem(18);
+//   line-height: u.rem(25);
+// }
+
+p {
+  color: var(--dark-grey);
+  font-weight: 500;
+  line-height: u.rem(25);
+}

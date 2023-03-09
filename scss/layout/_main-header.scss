@@ -1,0 +1,26 @@
+@use "../util/" as u;
+
+.main-header__logo-wrapper {
+  margin: u.rem(40) 0 u.rem(65);
+  h1 {
+    text-align: center;
+  }
+}
+
+@include u.breakpoint(medium) {
+  .main-header__logo-wrapper {
+    margin: u.rem(48) 0 u.rem(77);
+    h1 {
+      text-align: left;
+      padding-left: u.rem(15);
+    }
+  }
+}
+@include u.breakpoint(large) {
+  .main-header__logo-wrapper {
+    margin: u.rem(81) 0 u.rem(114);
+    h1 {
+      padding-left: u.rem(141);
+    }
+  }
+}

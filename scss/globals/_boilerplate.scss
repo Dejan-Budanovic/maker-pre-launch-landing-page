@@ -1,0 +1,30 @@
+@use "../util/" as u;
+
+html {
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: u.$main-font;
+  background-color: var(--dark-blue);
+  color: var(--light-grey);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  padding: 0 u.rem(24);
+  margin: 0 auto;
+  max-width: u.rem(1440);
+}

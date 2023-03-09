@@ -1,0 +1,108 @@
+@use "../util/" as u;
+.features-section {
+  text-align: center;
+  margin-top: u.rem(142);
+  .feature-article {
+    h4 {
+      font-size: u.rem(18);
+      margin-bottom: u.rem(11);
+    }
+    line-height: u.rem(25);
+    .feature-article__image-background {
+      background-color: var(--blue);
+      border-radius: u.rem(45);
+      height: u.rem(124);
+      width: u.rem(120);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: u.rem(56) auto u.rem(32);
+      flex-shrink: 0;
+    }
+    &:nth-child(1) {
+      img {
+        height: u.rem(80);
+      }
+    }
+    &:nth-child(2) {
+      img {
+        height: u.rem(67);
+      }
+    }
+    &:nth-child(3) {
+      img {
+        height: u.rem(71);
+      }
+    }
+    &:nth-child(4) {
+      img {
+        height: u.rem(56);
+      }
+    }
+  }
+}
+
+@include u.breakpoint(medium) {
+  .features-section {
+    text-align: left;
+    margin: u.rem(109) 10.28% 0;
+    .feature-article {
+      display: flex;
+      align-items: center;
+      gap: u.rem(56);
+      margin-bottom: u.rem(40);
+      .feature-article__text-wrapper {
+        h4 {
+          font-size: u.rem(18);
+          margin-bottom: u.rem(11);
+        }
+        line-height: u.rem(25);
+      }
+
+      .feature-article__image-background {
+        margin: 0;
+      }
+      &:nth-child(1),
+      &:nth-child(3) {
+        padding-left: u.rem(57);
+      }
+      &:nth-child(2),
+      &:nth-child(4) {
+        padding-right: u.rem(57);
+      }
+    }
+  }
+}
+@include u.breakpoint(large) {
+  .features-section {
+    text-align: left;
+    margin: 0 10.12% 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: u.rem(30);
+    .feature-article {
+      flex-direction: column;
+      gap: u.rem(48);
+      margin-bottom: 0;
+      .feature-article__text-wrapper {
+        h4 {
+          margin-bottom: u.rem(23);
+        }
+        line-height: u.rem(25);
+      }
+      .feature-article__image-background {
+        height: u.rem(164);
+        width: u.rem(160);
+      }
+      &:nth-child(1),
+      &:nth-child(3) {
+        padding-left: u.rem(0);
+      }
+      &:nth-child(2),
+      &:nth-child(4) {
+        padding-right: u.rem(0);
+        padding-top: u.rem(48);
+      }
+    }
+  }
+}
